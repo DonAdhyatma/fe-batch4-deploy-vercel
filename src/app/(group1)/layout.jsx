@@ -3,7 +3,7 @@
 // import {BrowserRouter} from 'react-router-dom'
 // import Nav from '@/components/navigation/nav'
 // import RouterView from '@/components/navigation/routerView'
-import NextNavG1 from '@/components/navigation/nextNavGroup1'
+import NextNavG1 from "@/components/navigation/nextNavGroup1";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,20 +17,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export default function Group1Layout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextNavG1 />
-        {children}
+    <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <NextNavG1 />
+      {children}
 
-        {/* Menggunakan react router dom */}
-        {/* <BrowserRouter>
+      {/* Menggunakan react router dom */}
+      {/* <BrowserRouter>
           <Nav />
           <RouterView/>
         </BrowserRouter> */}
-      </body>
-    </html>
+    </div>
   );
 }
